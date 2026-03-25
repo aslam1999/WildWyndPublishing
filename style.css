@@ -105,3 +105,73 @@ nav {
 .nav-link-wrap a:visited {
   color: var(--link-visited);
 }
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.hero {
+  padding: 1rem 0 5rem;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  align-items: start;
+}
+
+.hero-text h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--carbon-black);
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.hero-text h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--carbon-black);
+  margin-bottom: 1.4rem;
+}
+
+.hero-text p {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--carbon-black);
+  margin-bottom: 1rem;
+}
+
+.hero-text ul {
+  list-style: none;
+}
+
+.hero-text ul li {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--carbon-black);
+  padding-left: 1.2em;
+  position: relative;
+}
+
+.hero-text ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+.hero-logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.hero-logo img {
+  width: 340px;
+}
