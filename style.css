@@ -175,3 +175,92 @@ nav {
 .hero-logo img {
   width: 340px;
 }
+
+/* ============================================================
+   PURPLE MID SECTION
+   content_backdrop.png — img tag sets natural height
+   content overlaid absolutely on top
+   ============================================================ */
+.mid-section {
+  position: relative;
+  width: 100%;
+}
+
+.mid-section img.content-backdrop {
+  width: 100%;
+  display: block;
+}
+
+.mid-fungus {
+  position: absolute;
+  right: 2%;
+  top: 0;
+  width: 120px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.mid-fern {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 120px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.mid-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+}
+
+.mid-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.mid-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mid-col a {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--soft-ivory);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.mid-col a:hover {
+  color: var(--link-hover);
+}
+.mid-col a:visited {
+  color: var(--link-visited);
+}
+
+.mid-col img.section-img {
+  width: 100%;
+  max-width: 180px;
+}
+
+.mid-col p {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--soft-ivory);
+  text-align: center;
+  line-height: 1.6;
+  max-width: 200px;
+}
