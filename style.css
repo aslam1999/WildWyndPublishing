@@ -193,9 +193,9 @@ nav {
 
 .mid-fungus {
   position: absolute;
-  right: 2%;
-  top: 0;
-  width: 120px;
+  right: 0;
+  top: 20%;
+  width: 200px;
   pointer-events: none;
   z-index: 5;
 }
@@ -224,6 +224,7 @@ nav {
   gap: 6rem;
   width: 100%;
   max-width: 900px;
+  margin-top: 100px;
 }
 
 .mid-col {
@@ -253,14 +254,18 @@ nav {
 
 .mid-col img.section-img {
   width: 100%;
-  max-width: 180px;
+  max-width: 240px;
+}
+
+.mid-col img.section-img.image2 {
+  height: 325.84px;
 }
 
 .mid-col p {
   font-family: var(--font-body);
   font-size: 0.85rem;
   color: var(--soft-ivory);
-  text-align: center;
+  text-align: left;
   line-height: 1.6;
   max-width: 200px;
 }
