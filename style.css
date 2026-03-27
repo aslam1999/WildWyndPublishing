@@ -351,6 +351,15 @@ nav {
   left: 0;
 }
 
+/* About */
+
+body .about-page {
+  background-image: url("assets/About_BG.png");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
 /* ============================================================
    FOOTER
    Footer_backdrop.png — CSS background
