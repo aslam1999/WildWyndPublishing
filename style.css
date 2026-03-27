@@ -30,6 +30,11 @@ html {
 body {
   font-family: var(--font-body);
   overflow-x: hidden;
+  background-image: url("assets/Home_BG.png");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 /* ============================================================
@@ -110,7 +115,7 @@ nav {
    HERO SECTION
    ============================================================ */
 .hero {
-  padding: 1rem 0 5rem;
+  padding: 5rem 0 5rem;
 }
 
 .hero-content {
@@ -128,7 +133,7 @@ nav {
   font-weight: 700;
   color: var(--carbon-black);
   text-transform: uppercase;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .hero-text h2 {
@@ -136,7 +141,7 @@ nav {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--carbon-black);
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-text p {
@@ -149,6 +154,11 @@ nav {
 
 .hero-text ul {
   list-style: none;
+}
+
+.hero-text p,
+.hero-text ul {
+  max-width: 400px;
 }
 
 .hero-text ul li {
@@ -298,7 +308,7 @@ nav {
 }
 
 .bottom-hero-text {
-  width: 45%;
+  width: 35%;
 }
 
 .bottom-hero-text h3 {
