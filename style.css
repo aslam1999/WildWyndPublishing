@@ -353,11 +353,12 @@ nav {
 
 /* About */
 
-body .about-page {
+.about-page {
   background-image: url("assets/About_BG.png");
   background-size: 100% auto;
   background-position: center top;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 /* ============================================================
