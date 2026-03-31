@@ -1075,6 +1075,154 @@ nav {
 }
 
 /* ============================================================
+   PORTFOLIO — BOOK MODAL
+   ============================================================ */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  padding: 2rem 0;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-card {
+  position: relative;
+  width: 560px;
+  flex-shrink: 0;
+  background-image: url("assets/Portfolio_cards/Card_Form backdrop.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 3rem 4rem;
+}
+
+.modal-backdrop {
+  display: block;
+}
+
+.modal-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: var(--soft-ivory);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--carbon-black);
+  font-weight: 700;
+}
+
+.modal-close:hover {
+  background: var(--botanical-sage);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-cover {
+  width: 300px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.modal-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--soft-ivory);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.modal-author {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--soft-ivory);
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+.modal-meta {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--soft-ivory);
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.modal-body p {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--soft-ivory);
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+.modal-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1.5rem;
+  flex-shrink: 0;
+}
+
+.modal-back,
+.modal-buy {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--soft-ivory);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.modal-back:hover,
+.modal-buy:hover {
+  color: var(--link-hover);
+}
+
+.modal-back:visited,
+.modal-buy:visited {
+  color: var(--link-visited);
+}
+
+/* ============================================================
    FOOTER
    Footer_backdrop.png — CSS background
    ============================================================ */
