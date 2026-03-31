@@ -488,6 +488,92 @@ nav {
 }
 
 /* ============================================================
+   ABOUT — MIDDLE PURPLE BANDS
+   Middle_backdrops.png — img sets height, jagged both edges
+   ============================================================ */
+.middle-backdrop-section {
+  position: relative;
+  width: 100%;
+}
+
+.middle-backdrop-section img.middle-backdrop {
+  width: 100%;
+  display: block;
+}
+
+.middle-left-plant {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 400px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.middle-right-plant {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 130px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.middle-backdrop-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+}
+
+.middle-service {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.middle-service img {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.middle-service-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.middle-service-text a {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--soft-ivory);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-transform: uppercase;
+}
+
+.middle-service-text a:hover {
+  color: var(--link-hover);
+}
+.middle-service-text a:visited {
+  color: var(--link-visited);
+}
+
+.middle-service-text p {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--soft-ivory);
+  line-height: 1.6;
+  max-width: 220px;
+}
+
+/* ============================================================
    FOOTER
    Footer_backdrop.png — CSS background
    ============================================================ */
