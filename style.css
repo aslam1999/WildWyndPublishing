@@ -927,9 +927,9 @@ nav {
    ============================================================ */
 .contact-page {
   background-image: url("assets/Contact_Page_Bg.png");
-  background-size: 100% auto;
   background-position: center top;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   min-height: 1400px;
 }
 
@@ -940,11 +940,30 @@ nav {
   background-image: url("assets/Content_backdrop.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  min-height: 500px;
   padding: 5rem 8rem 6rem;
+  position: relative;
+  width: 100%;
+  min-height: 600px;
 }
 
 .contact-backdrop {
   display: none;
+  width: 100%;
+}
+
+.contact-section-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  padding: 5rem 8rem;
+  max-width: 600px;
+  margin-top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .contact-fungus {
@@ -963,14 +982,6 @@ nav {
   width: 220px;
   pointer-events: none;
   z-index: 5;
-}
-
-.contact-section-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  max-width: 500px;
-  margin: 0 auto;
 }
 
 .contact-inquiry {
@@ -1016,6 +1027,51 @@ nav {
   color: var(--soft-ivory);
   line-height: 1.6;
   max-width: 260px;
+}
+
+.bottom-contact {
+  position: relative;
+  padding: 4rem 0 6rem;
+}
+
+.bottom-contact-graphic {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  pointer-events: none;
+  z-index: 0;
+}
+.bottom-contact-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 6rem 0 4rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 6rem;
+}
+
+.bottom-contact-text {
+  width: 40%;
+  position: relative;
+  z-index: 1;
+}
+
+.bottom-contact-text h3 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--carbon-black);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.bottom-contact-text p {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--carbon-black);
+  margin-bottom: 1rem;
 }
 
 /* ============================================================
