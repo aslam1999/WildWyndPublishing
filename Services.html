@@ -119,10 +119,10 @@
       <div class="services-container">
         <div class="services-blocks-grid">
           <!-- EDITING -->
-          <div class="service-block">
+          <div class="service-block" data-service="editing">
             <div class="service-head">
               <img src="assets/SERVICES/Editing_Icon.png" alt="" />
-              <h3>EDITING</h3>
+              <h3><a href="#">EDITING</a></h3>
             </div>
 
             <ul>
@@ -136,10 +136,10 @@
           </div>
 
           <!-- DESIGN -->
-          <div class="service-block">
+          <div class="service-block" data-service="design">
             <div class="service-head">
               <img src="assets/SERVICES/Design_icon.png" alt="" />
-              <h3>DESIGN</h3>
+              <h3><a href="#">DESIGN</a></h3>
             </div>
 
             <ul>
@@ -153,10 +153,10 @@
           </div>
 
           <!-- DISTRIBUTION -->
-          <div class="service-block">
+          <div class="service-block" data-service="distribution">
             <div class="service-head">
               <img src="assets/SERVICES/Distribution_icon.png" alt="" />
-              <h3>DISTRIBUTION</h3>
+              <h3><a href="#">DISTRIBUTION</a></h3>
             </div>
 
             <ul>
@@ -169,10 +169,10 @@
           </div>
 
           <!-- MARKETING -->
-          <div class="service-block">
+          <div class="service-block" data-service="marketing">
             <div class="service-head">
               <img src="assets/SERVICES/Marketing_icon.png" alt="" />
-              <h3>MARKETING</h3>
+              <h3><a href="#">MARKETING</a></h3>
             </div>
 
             <ul>
@@ -275,5 +275,30 @@
         </div>
       </div>
     </footer>
+    <!-- ══════════ SERVICE MODALS ══════════ -->
+    <div class="modal-overlay" id="service-modal-overlay">
+      <div class="modal-card">
+        <button class="modal-close" id="service-modal-close">&#10005;</button>
+        <div class="modal-content">
+          <div class="service-modal-header">
+            <img
+              class="service-modal-icon"
+              id="service-modal-icon"
+              src="assets/Services_cards/design_icon_large.png"
+              alt=""
+            />
+            <h2 class="modal-title" id="service-modal-title"></h2>
+          </div>
+          <div class="modal-body" id="service-modal-body"></div>
+          <div class="modal-links">
+            <a class="modal-back" id="service-modal-next" href="#">NEXT STEP</a>
+            <a class="modal-buy" id="service-modal-submit" href="contact.html"
+              >SUBMIT A REQUEST</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
