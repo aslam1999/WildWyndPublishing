@@ -355,10 +355,9 @@ nav {
 
 .about-page {
   background-image: url("assets/About_BG.png");
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-position: center top;
   background-repeat: no-repeat;
-  min-height: 100vh;
 }
 
 /* ============================================================
@@ -458,7 +457,7 @@ nav {
   max-width: 1400px;
   margin: 0 auto;
   padding: 10rem 4rem;
-  gap: 4rem;
+  gap: 30rem;
   align-items: start;
 }
 
@@ -514,9 +513,9 @@ nav {
 .middle-right-plant {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
-  width: 130px;
+  width: 400px;
   pointer-events: none;
   z-index: 5;
 }
@@ -526,8 +525,15 @@ nav {
   inset: 0;
   display: flex;
   align-items: center;
+  padding: 0 8rem;
+}
+
+.middle-backdrop-center {
   justify-content: center;
-  padding: 0 4rem;
+}
+
+.middle-backdrop-left {
+  justify-content: flex-start;
 }
 
 .middle-service {
