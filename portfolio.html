@@ -300,41 +300,6 @@
         </div>
       </div>
     </footer>
-
-    <!-- ══════════ CAROUSEL SCRIPT ══════════ -->
-    <script>
-      document
-        .querySelectorAll(".portfolio-carousel-section")
-        .forEach((section) => {
-          const track = section.querySelector(".carousel-track");
-          const prevBtn = section.querySelector(".carousel-btn--prev");
-          const nextBtn = section.querySelector(".carousel-btn--next");
-          let current = 0;
-
-          function getVisible() {
-            return Math.floor(
-              section.querySelector(".carousel-track-container").offsetWidth /
-                (section.querySelector(".carousel-item").offsetWidth + 32),
-            );
-          }
-
-          function update() {
-            const itemWidth =
-              track.querySelector(".carousel-item").offsetWidth + 32;
-            track.style.transform = `translateX(-${current * itemWidth}px)`;
-          }
-
-          nextBtn.addEventListener("click", () => {
-            const total = track.children.length;
-            if (current < total - getVisible()) current++;
-            update();
-          });
-
-          prevBtn.addEventListener("click", () => {
-            if (current > 0) current--;
-            update();
-          });
-        });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
