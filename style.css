@@ -923,6 +923,102 @@ nav {
 }
 
 /* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+.contact-page {
+  background-image: url("assets/Contact_Page_Bg.png");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: repeat-y;
+  min-height: 1400px;
+}
+
+/* CONTACT — PURPLE SECTION */
+.contact-section {
+  position: relative;
+  width: 100%;
+  background-image: url("assets/Content_backdrop.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 5rem 8rem 6rem;
+}
+
+.contact-backdrop {
+  display: none;
+}
+
+.contact-fungus {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 180px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.contact-plant-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.contact-section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-inquiry {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.contact-inquiry img {
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.contact-inquiry-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-inquiry-text a {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--soft-ivory);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.contact-inquiry-text a:hover {
+  color: var(--link-hover);
+}
+
+.contact-inquiry-text a:visited {
+  color: var(--link-visited);
+}
+
+.contact-inquiry-text p {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--soft-ivory);
+  line-height: 1.6;
+  max-width: 260px;
+}
+
+/* ============================================================
    FOOTER
    Footer_backdrop.png — CSS background
    ============================================================ */
