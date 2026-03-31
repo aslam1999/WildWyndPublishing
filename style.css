@@ -682,7 +682,7 @@ nav {
   position: absolute;
   left: 0;
   bottom: -145px;
-  width: 220px;
+  width: 400px;
   pointer-events: none;
 }
 
@@ -734,7 +734,7 @@ footer {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 150px;
+  width: 300px;
   pointer-events: none;
   z-index: 3;
 }
