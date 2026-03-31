@@ -763,8 +763,8 @@ nav {
 .portfolio-plant-left {
   position: absolute;
   left: 0;
-  bottom: 10%;
-  width: 180px;
+  bottom: 1%;
+  width: 300px;
   pointer-events: none;
   z-index: 5;
 }
@@ -773,7 +773,7 @@ nav {
   position: absolute;
   right: 0;
   top: 5%;
-  width: 180px;
+  width: 300px;
   pointer-events: none;
   z-index: 5;
 }
