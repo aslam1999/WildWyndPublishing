@@ -1043,7 +1043,7 @@ nav {
   z-index: 0;
 }
 .bottom-contact-content {
-  max-width: 900px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 6rem 0 4rem;
   display: flex;
@@ -1052,7 +1052,7 @@ nav {
 }
 
 .bottom-contact-text {
-  width: 40%;
+  width: 30%;
   position: relative;
   z-index: 1;
 }
@@ -1090,6 +1090,15 @@ footer {
 .footer-plant {
   position: absolute;
   left: 0;
+  bottom: 0;
+  width: 300px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.footer-plant-right {
+  position: absolute;
+  right: 0;
   bottom: 0;
   width: 300px;
   pointer-events: none;
