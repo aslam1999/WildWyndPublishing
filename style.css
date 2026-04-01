@@ -961,7 +961,7 @@ a:visited {
 .contact-section {
   position: relative;
   width: 100%;
-  background-image: url("assets/Content_backdrop.png");
+  background-image: url("assets/content_backdrop.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   min-height: 500px;
