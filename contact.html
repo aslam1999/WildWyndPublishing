@@ -122,7 +122,7 @@
         <div class="contact-inquiry">
           <img src="assets/Questions.png" alt="General Inquiries icon" />
           <div class="contact-inquiry-text">
-            <a href="#">GENERAL INQUIRIES</a>
+            <a href="#" id="open-general-form">GENERAL INQUIRIES</a>
             <p>
               Use this form for questions about our company, our portfolio and
               services, or about publishing in general.
@@ -134,7 +134,7 @@
         <div class="contact-inquiry">
           <img src="assets/Editing_icon.png" alt="Service Inquiries icon" />
           <div class="contact-inquiry-text">
-            <a href="#">SERVICE INQUIRIES</a>
+            <a href="#" id="open-service-form">SERVICE INQUIRIES</a>
             <p>
               Use this form to submit a request for entry into one or more of
               our service streams.
@@ -199,5 +199,143 @@
         </div>
       </div>
     </footer>
+    <!-- ══════════ GENERAL INQUIRY FORM ══════════ -->
+    <div class="modal-overlay" id="general-form-overlay">
+      <div class="modal-card">
+        <button class="modal-close" id="general-form-close">&#10005;</button>
+        <div class="modal-content">
+          <img
+            class="form-logo"
+            src="assets/Logo.png"
+            alt="Wildwynd Publishing"
+          />
+          <h2 class="modal-title">GENERAL INQUIRY</h2>
+          <form class="wildwynd-form" id="general-inquiry-form">
+            <label>Name</label>
+            <input type="text" name="name" required />
+            <label>Email Address</label>
+            <input type="email" name="email" required />
+            <label>Phone Number (optional)</label>
+            <input type="text" name="phone" />
+            <label
+              >Have you purchased books from Wildwynd Publishing before?</label
+            >
+            <div class="form-checkboxes">
+              <label
+                ><input type="radio" name="purchased" value="yes" /> Yes</label
+              >
+              <label
+                ><input type="radio" name="purchased" value="no" /> No</label
+              >
+            </div>
+            <label>Have you used Wildwynd Publishing's services before?</label>
+            <div class="form-checkboxes">
+              <label
+                ><input type="radio" name="used-services" value="yes" />
+                Yes</label
+              >
+              <label
+                ><input type="radio" name="used-services" value="no" />
+                No</label
+              >
+            </div>
+            <label>What is your question?</label>
+            <textarea name="question" rows="5"></textarea>
+            <div class="form-buttons">
+              <a class="modal-back" id="general-form-cancel" href="#">CANCEL</a>
+              <button class="modal-buy" type="submit">SUBMIT</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════ SERVICE REQUEST FORM ══════════ -->
+    <div class="modal-overlay" id="service-form-overlay">
+      <div class="modal-card">
+        <button class="modal-close" id="service-form-close">&#10005;</button>
+        <div class="modal-content">
+          <img
+            class="form-logo"
+            src="assets/Logo.png"
+            alt="Wildwynd Publishing"
+          />
+          <h2 class="modal-title">SERVICE REQUEST</h2>
+          <form class="wildwynd-form" id="service-request-form">
+            <label>Name</label>
+            <input type="text" name="name" required />
+            <label>Email Address</label>
+            <input type="email" name="email" required />
+            <label>Phone Number (optional)</label>
+            <input type="text" name="phone" />
+            <label>Have you used Wildwynd Publishing's services before?</label>
+            <div class="form-checkboxes">
+              <label
+                ><input type="radio" name="used-services" value="yes" />
+                Yes</label
+              >
+              <label
+                ><input type="radio" name="used-services" value="no" />
+                No</label
+              >
+            </div>
+            <label
+              >Which of our primary service streams are you interested in?
+              (check all that apply)</label
+            >
+            <div class="form-checkboxes">
+              <label
+                ><input type="checkbox" name="services" value="editing" />
+                Editing</label
+              >
+              <label
+                ><input type="checkbox" name="services" value="design" />
+                Design</label
+              >
+              <label
+                ><input type="checkbox" name="services" value="distribution" />
+                Distribution</label
+              >
+              <label
+                ><input type="checkbox" name="services" value="marketing" />
+                Marketing</label
+              >
+            </div>
+            <label>Tell us more about what your project is about</label>
+            <textarea name="project" rows="4"></textarea>
+            <label>What are your goals for this project?</label>
+            <textarea name="goals" rows="4"></textarea>
+            <label>Has your work already been published?</label>
+            <div class="form-checkboxes">
+              <label
+                ><input type="radio" name="published" value="yes" /> Yes</label
+              >
+              <label
+                ><input type="radio" name="published" value="no" /> No</label
+              >
+            </div>
+            <label
+              >If your work is unpublished, please attach a .docX file
+              here</label
+            >
+            <input type="file" name="manuscript" accept=".docx" />
+            <label
+              >If your work is published, please provide an ISBN# and a URL if
+              digital</label
+            >
+            <input type="text" name="isbn" />
+            <label
+              >Do you have any other questions related to our services?</label
+            >
+            <textarea name="other" rows="4"></textarea>
+            <div class="form-buttons">
+              <a class="modal-back" id="service-form-cancel" href="#">CANCEL</a>
+              <button class="modal-buy" type="submit">SUBMIT</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

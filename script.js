@@ -1,3 +1,24 @@
+// ══════════ ACTIVE NAV LINK (FINAL FIXED) ══════════
+
+// Get current page name
+let currentPage = window.location.pathname.split("/").pop();
+
+// Handle homepage case (e.g., "/" → index.html)
+if (currentPage === "") {
+  currentPage = "index.html";
+}
+
+// Loop through all nav links
+document.querySelectorAll(".nav-link-wrap a").forEach((link) => {
+  // Get only the file name from href (removes ./ or /)
+  let linkPage = link.getAttribute("href").split("/").pop();
+
+  // Compare and add active class
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  }
+});
+
 // <!-- ══════════ CAROUSEL SCRIPT ══════════ -->
 document
   .querySelectorAll(".portfolio-carousels .carousel-wrapper")
@@ -272,6 +293,9 @@ const services = {
 };
 
 // ══════════ SERVICE MODAL ══════════
+
+let currentService = "";
+const serviceOrder = ["editing", "design", "distribution", "marketing"];
 const serviceOverlay = document.getElementById("service-modal-overlay");
 const serviceCloseBtn = document.getElementById("service-modal-close");
 
@@ -281,6 +305,7 @@ if (serviceOverlay && serviceCloseBtn) {
     block.addEventListener("click", (e) => {
       e.preventDefault();
       const id = block.getAttribute("data-service");
+      currentService = id;
       const service = services[id];
       if (!service) return;
       document.getElementById("service-modal-icon").src = service.icon;
@@ -298,4 +323,123 @@ if (serviceOverlay && serviceCloseBtn) {
     serviceOverlay.classList.remove("active");
     document.body.style.overflow = "";
   });
+
+  const serviceModalSubmit = document.getElementById("service-modal-submit");
+  if (serviceModalSubmit) {
+    serviceModalSubmit.addEventListener("click", (e) => {
+      e.preventDefault();
+      serviceOverlay.classList.remove("active");
+      document.body.style.overflow = "";
+      const serviceFormOverlay = document.getElementById(
+        "service-form-overlay",
+      );
+      if (serviceFormOverlay) {
+        serviceFormOverlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+      } else {
+        window.location.href = "contact.html";
+      }
+    });
+  }
+}
+
+const nextBtn = document.getElementById("service-modal-next");
+
+if (nextBtn) {
+  nextBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const currentIndex = serviceOrder.indexOf(currentService);
+    const nextService = serviceOrder[currentIndex + 1];
+
+    if (nextService) {
+      const service = services[nextService];
+
+      // update modal manually (same as your existing code)
+      document.getElementById("service-modal-icon").src = service.icon;
+      document.getElementById("service-modal-icon").alt = service.alt;
+      document.getElementById("service-modal-title").textContent =
+        service.title;
+      document.getElementById("service-modal-body").innerHTML = service.body;
+
+      currentService = nextService;
+    }
+  });
+}
+
+if (!nextService) {
+  nextBtn.style.opacity = "0.5";
+  nextBtn.style.pointerEvents = "none";
+}
+
+// ══════════ FORMS ══════════
+const generalFormOverlay = document.getElementById("general-form-overlay");
+const serviceFormOverlay = document.getElementById("service-form-overlay");
+const generalFormClose = document.getElementById("general-form-close");
+const serviceFormClose = document.getElementById("service-form-close");
+const generalFormCancel = document.getElementById("general-form-cancel");
+const serviceFormCancel = document.getElementById("service-form-cancel");
+const openGeneralForm = document.getElementById("open-general-form");
+const openServiceForm = document.getElementById("open-service-form");
+
+if (generalFormOverlay) {
+  if (openServiceForm && serviceFormOverlay) {
+    openServiceForm.addEventListener("click", (e) => {
+      e.preventDefault();
+      serviceFormOverlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  }
+
+  // close general form
+  generalFormClose.addEventListener("click", () => {
+    generalFormOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+  });
+
+  // close service form
+  serviceFormClose.addEventListener("click", () => {
+    serviceFormOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+  });
+
+  // cancel buttons
+  if (generalFormCancel) {
+    generalFormCancel.addEventListener("click", (e) => {
+      e.preventDefault();
+      generalFormOverlay.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+  }
+
+  if (serviceFormCancel) {
+    serviceFormCancel.addEventListener("click", (e) => {
+      e.preventDefault();
+      serviceFormOverlay.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+  }
+
+  // submit handlers
+  document
+    .getElementById("general-inquiry-form")
+    .addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert(
+        "Thank you! Your inquiry has been submitted. We will respond within 5 business days.",
+      );
+      generalFormOverlay.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+
+  document
+    .getElementById("service-request-form")
+    .addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert(
+        "Thank you! Your service request has been submitted. We will respond within 5 business days.",
+      );
+      serviceFormOverlay.classList.remove("active");
+      document.body.style.overflow = "";
+    });
 }
