@@ -202,7 +202,7 @@ if (overlay && closeBtn) {
 // ══════════ SERVICE DATA ══════════
 const services = {
   editing: {
-    icon: "assets/SERVICES_CARDS/edit_icon_large.png",
+    icon: "assets/Services_cards/edit_icon_large.png",
     alt: "Editing icon",
     title: "PHASE 1: EDITING",
     body: `
@@ -220,7 +220,7 @@ const services = {
     next: "#design",
   },
   design: {
-    icon: "assets/SERVICES_CARDS/design_icon_large.png",
+    icon: "assets/Services_cards/design_icon_large.png",
     alt: "Design icon",
     title: "PHASE 2: DESIGN",
     body: `
@@ -238,7 +238,7 @@ const services = {
     next: "#distribution",
   },
   distribution: {
-    icon: "assets/SERVICES_CARDS/distribution_icon_large.png",
+    icon: "assets/Services_cards/distribution_icon_large.png",
     alt: "Distribution icon",
     title: "PHASE 3: DISTRIBUTION",
     body: `
@@ -256,7 +256,7 @@ const services = {
     next: "#marketing",
   },
   marketing: {
-    icon: "assets/SERVICES_CARDS/marketing_icon_large.png",
+    icon: "assets/Services_cards/marketing_icon_large.png",
     alt: "Marketing icon",
     title: "PHASE 4: MARKETING",
     body: `
