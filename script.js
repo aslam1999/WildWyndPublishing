@@ -1,19 +1,9 @@
-// ══════════ ACTIVE NAV LINK (FINAL FIXED) ══════════
+// ══════════ ACTIVE NAV LINK ══════════
+const currentPage = window.location.pathname.split("/").pop();
 
-// Get current page name
-let currentPage = window.location.pathname.split("/").pop();
-
-// Handle homepage case (e.g., "/" → index.html)
-if (currentPage === "") {
-  currentPage = "index.html";
-}
-
-// Loop through all nav links
 document.querySelectorAll(".nav-link-wrap a").forEach((link) => {
-  // Get only the file name from href (removes ./ or /)
-  let linkPage = link.getAttribute("href").split("/").pop();
+  const linkPage = link.getAttribute("href").split("/").pop();
 
-  // Compare and add active class
   if (linkPage === currentPage) {
     link.classList.add("active");
   }
@@ -293,9 +283,6 @@ const services = {
 };
 
 // ══════════ SERVICE MODAL ══════════
-
-let currentService = "";
-const serviceOrder = ["editing", "design", "distribution", "marketing"];
 const serviceOverlay = document.getElementById("service-modal-overlay");
 const serviceCloseBtn = document.getElementById("service-modal-close");
 
@@ -305,15 +292,25 @@ if (serviceOverlay && serviceCloseBtn) {
     block.addEventListener("click", (e) => {
       e.preventDefault();
       const id = block.getAttribute("data-service");
-      currentService = id;
       const service = services[id];
       if (!service) return;
+
       document.getElementById("service-modal-icon").src = service.icon;
       document.getElementById("service-modal-icon").alt = service.alt;
       document.getElementById("service-modal-title").textContent =
         service.title;
       document.getElementById("service-modal-body").innerHTML = service.body;
-      document.getElementById("service-modal-next").href = service.next;
+
+      const nextLink = document.getElementById("service-modal-next");
+
+      if (service.next && service.next !== "#") {
+        nextLink.style.display = "inline-block";
+        nextLink.href = "#"; // we'll handle click with JS
+        nextLink.textContent = "NEXT STEP";
+      } else {
+        nextLink.style.display = "none"; // Hide on last card (Marketing)
+      }
+
       serviceOverlay.classList.add("active");
       document.body.style.overflow = "hidden";
     });
@@ -324,12 +321,57 @@ if (serviceOverlay && serviceCloseBtn) {
     document.body.style.overflow = "";
   });
 
+  // Handle "NEXT STEP" click - go to next service
+  const nextLink = document.getElementById("service-modal-next");
+  if (nextLink) {
+    nextLink.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const currentTitle = document
+        .getElementById("service-modal-title")
+        .textContent.trim();
+
+      let nextServiceId = null;
+
+      if (currentTitle.includes("EDITING")) nextServiceId = "design";
+      else if (currentTitle.includes("DESIGN")) nextServiceId = "distribution";
+      else if (currentTitle.includes("DISTRIBUTION"))
+        nextServiceId = "marketing";
+
+      if (nextServiceId) {
+        // Close current modal
+        serviceOverlay.classList.remove("active");
+
+        // Small delay to let the close animation / removal finish
+        setTimeout(() => {
+          const nextBlock = document.querySelector(
+            `.service-block[data-service="${nextServiceId}"]`,
+          );
+
+          if (nextBlock) {
+            // Scroll to the top of the viewport first (this is the key fix)
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "instant", // or "smooth" if you prefer a gentle scroll
+            });
+
+            // Then open the next service modal
+            nextBlock.click();
+          }
+        }, 350); // increased slightly for smoother transition
+      }
+    });
+  }
+
+  // Submit button still opens the service request form
   const serviceModalSubmit = document.getElementById("service-modal-submit");
   if (serviceModalSubmit) {
     serviceModalSubmit.addEventListener("click", (e) => {
       e.preventDefault();
       serviceOverlay.classList.remove("active");
       document.body.style.overflow = "";
+
       const serviceFormOverlay = document.getElementById(
         "service-form-overlay",
       );
@@ -343,35 +385,6 @@ if (serviceOverlay && serviceCloseBtn) {
   }
 }
 
-const nextBtn = document.getElementById("service-modal-next");
-
-if (nextBtn) {
-  nextBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    const currentIndex = serviceOrder.indexOf(currentService);
-    const nextService = serviceOrder[currentIndex + 1];
-
-    if (nextService) {
-      const service = services[nextService];
-
-      // update modal manually (same as your existing code)
-      document.getElementById("service-modal-icon").src = service.icon;
-      document.getElementById("service-modal-icon").alt = service.alt;
-      document.getElementById("service-modal-title").textContent =
-        service.title;
-      document.getElementById("service-modal-body").innerHTML = service.body;
-
-      currentService = nextService;
-    }
-  });
-}
-
-if (!nextService) {
-  nextBtn.style.opacity = "0.5";
-  nextBtn.style.pointerEvents = "none";
-}
-
 // ══════════ FORMS ══════════
 const generalFormOverlay = document.getElementById("general-form-overlay");
 const serviceFormOverlay = document.getElementById("service-form-overlay");
@@ -382,8 +395,18 @@ const serviceFormCancel = document.getElementById("service-form-cancel");
 const openGeneralForm = document.getElementById("open-general-form");
 const openServiceForm = document.getElementById("open-service-form");
 
-if (generalFormOverlay) {
-  if (openServiceForm && serviceFormOverlay) {
+if (generalFormOverlay && serviceFormOverlay) {
+  // open general form
+  if (openGeneralForm) {
+    openGeneralForm.addEventListener("click", (e) => {
+      e.preventDefault();
+      generalFormOverlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  }
+
+  // open service form
+  if (openServiceForm) {
     openServiceForm.addEventListener("click", (e) => {
       e.preventDefault();
       serviceFormOverlay.classList.add("active");
