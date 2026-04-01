@@ -50,7 +50,7 @@ document
 // ══════════ BOOK DATA ══════════
 const books = {
   1: {
-    cover: "assets/PORTFOLIO_CARDS/book1.png",
+    cover: "assets/portfolio_cards/book1.png",
     alt: "Cover image, Sexy Centaur and Badass Birdman",
     title: "SEXY CENTAUR AND BADASS BIRDMAN",
     author: "Stewbert Filthwell",
@@ -60,7 +60,7 @@ const books = {
     buy: "#",
   },
   2: {
-    cover: "assets/PORTFOLIO_CARDS/book2.png",
+    cover: "assets/portfolio_cards/book2.png",
     alt: "Cover image, Salt In Her Eye",
     title: "SALT IN HER EYE",
     author: "Faye Krill",
@@ -70,7 +70,7 @@ const books = {
     buy: "#",
   },
   3: {
-    cover: "assets/PORTFOLIO_CARDS/book3.png",
+    cover: "assets/portfolio_cards/book3.png",
     alt: "Cover image, Fast Eddie",
     title: "FAST EDDIE",
     author: "Liza RD",
@@ -80,7 +80,7 @@ const books = {
     buy: "#",
   },
   4: {
-    cover: "assets/PORTFOLIO_CARDS/book4.png",
+    cover: "assets/portfolio_cards/book4.png",
     alt: "Cover image, Pahtchya Batur",
     title: "PAHTCHYA BATUR",
     author: "Blayz Goldthorn",
@@ -90,7 +90,7 @@ const books = {
     buy: "https://www.amazon.com/Pahtchya-Batur-Clans-Couvai-book-ebook/dp/B0DDPH3P94",
   },
   5: {
-    cover: "assets/PORTFOLIO_CARDS/book5.png",
+    cover: "assets/portfolio_cards/book5.png",
     alt: "Cover image, Adventures of the Scholarly Owls",
     title: "ADVENTURES OF THE SCHOLARLY OWLS",
     author: "Swivel Head",
@@ -100,7 +100,7 @@ const books = {
     buy: "#",
   },
   6: {
-    cover: "assets/PORTFOLIO_CARDS/book6.png",
+    cover: "assets/portfolio_cards/book6.png",
     alt: "Cover image, Excursions Into Another Dimension",
     title: "EXCURSIONS INTO ANOTHER DIMENSION",
     author: "Margaret Kealy",
@@ -110,7 +110,7 @@ const books = {
     buy: "#",
   },
   7: {
-    cover: "assets/PORTFOLIO_CARDS/book7.png",
+    cover: "assets/portfolio_cards/book7.png",
     alt: "Cover image, Vancouver Island's Dopest Hiking Trails",
     title: "VANCOUVER ISLAND'S DOPEST HIKING TRAILS",
     author: "Boots McToots",
@@ -120,7 +120,7 @@ const books = {
     buy: "#",
   },
   8: {
-    cover: "assets/PORTFOLIO_CARDS/book8.png",
+    cover: "assets/portfolio_cards/book8.png",
     alt: "Cover image, Maaji's Kitchen",
     title: "MAAJI'S KITCHEN",
     author: "Asha Mehta",
@@ -130,7 +130,7 @@ const books = {
     buy: "#",
   },
   9: {
-    cover: "assets/PORTFOLIO_CARDS/book9.png",
+    cover: "assets/portfolio_cards/book9.png",
     alt: "Cover image, Chi Coast",
     title: "CHI COAST",
     author: "Jun Li",
@@ -140,7 +140,7 @@ const books = {
     buy: "#",
   },
   10: {
-    cover: "assets/PORTFOLIO_CARDS/book10.png",
+    cover: "assets/portfolio_cards/book10.png",
     alt: "Cover image, From Guyana to Haida Gwai",
     title: "FROM GUYANA TO HAIDA GWAI",
     author: "Asida Okoye",
@@ -149,7 +149,7 @@ const books = {
     buy: "#",
   },
   11: {
-    cover: "assets/PORTFOLIO_CARDS/book11.png",
+    cover: "assets/portfolio_cards/book11.png",
     alt: "Cover image, Cold Water Travellers",
     title: "COLD WATER TRAVELLERS",
     author: "Pamela Molasses",
@@ -158,7 +158,7 @@ const books = {
     buy: "#",
   },
   12: {
-    cover: "assets/PORTFOLIO_CARDS/book12.png",
+    cover: "assets/portfolio_cards/book12.png",
     alt: "Cover image, The Beaten Path",
     title: "THE BEATEN PATH",
     author: "Clare Eagledon",
